@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends "test_app/base.html" %}
+{% block body_block %}
+        <div class="text-center">
+                <h1>
+                        <strong>
+                                Authentication Required
+                        </strong>
+                </h1>
+                
+        </div>
+        <form method="post" action="{% url 'test_app:user_login' %}">
+                {% csrf_token %}
+                {# A more "HTML" way of creating the login form#}
+                
+                <!-- <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Username"> -->
+                <h5>{{ val }}</h5>
+                <div class="form-group">
+                        <label for="exampleInputEmail1"><strong>Username</strong></label>
+                        <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+                </div>
+                <div class="form-group">
+                        <label for="exampleInputPassword1"><strong>Password</strong></label>
+                        <input type="password"  name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                
+                <!-- <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" name="" value="Login"> -->
+                <div class="text-center">
+                        <input type="submit" class="btn btn-primary" value="Login">
+                </div>
+        </form>
+        <br>
+        <div class="text-center">
+                <!-- <input type="submit" class="btn btn-primary" value="Login"> -->
+                <small id="emailHelp" class="form-text text-muted">Don't Have A Account?</small>
+                <a class="btn btn-primary text-center"  href="{% url 'test_app:register' %}">Sign Up</a>
+        </div>
+        
+
+{% endblock %}
+
+
+
+
+<!-- 
+<form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form> -->

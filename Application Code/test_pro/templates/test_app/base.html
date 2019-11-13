@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dell</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href='{% static "img/favicon.png"%}' rel="icon">
+  <link href='{% static "img/apple-touch-icon.png"%}' rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href='{% static "lib/bootstrap/css/bootstrap.min.css"%}' rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href='{% static "lib/font-awesome/css/font-awesome.min.css" %}' rel="stylesheet">
+  <link href='{% static "lib/animate/animate.min.css" %}' rel="stylesheet">
+  <link href='{% static "lib/ionicons/css/ionicons.min.css" %}' rel="stylesheet">
+  <link href='{% static "lib/owlcarousel/assets/owl.carousel.min.css" %}' rel="stylesheet">
+  <link href='{% static "lib/lightbox/css/lightbox.min.css" %}' rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href='{% static "css/style.css" %}' rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: NewBiz
+    Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header" class="fixed-top" style="border-style: inset;">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href="/" class="scrollto"><img src='{% static "img/logo1.jpg" %}' ></a>
+      </div>
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/#testimonials">Team</a></li>
+          <li class="drop-down"><a href="">Quick Links</a>
+            <ul>
+                <li><a href="/meeting/meet">Meeting</a></li>
+                <li><a href="/meeting/ven">Ongoing Ventures</a></li>
+                <li><a href="/re/sport">Events</a></li>
+                <li><a href="/re/cafe">Cafeteria</a></li>
+            </ul>
+          </li>
+          <li><a href="/#contact">Contact Us</a></li>
+          {% if logged %}
+          <li><a href="/logout">Sign Out</a></li>
+          {%  else  %}
+          <li><a href="/home/user_login">Login</a></li>
+          {% endif %}
+        </ul>
+        
+      </nav><!-- .main-nav -->
+
+      
+    </div>
+  </header><!-- #header -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container jumbotron">
+{% block body_block%}
+
+{%endblock%}
+</div>
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h3>Tech Nerds</h3>
+            <p>We aspire to help you to fit into your workplace and make life easier for you!!!</div>
+
+          <!-- <div class="col-lg-2 col-md-6 footer-links"> 
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>        
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>-->
+
+          <div class="col-lg-3 col-md-6 footer-contact" style="margin-left: 50px;">
+            <h4>Contact Us</h4>
+            <p>
+              IIIT Bhubaneswar <br>
+              Gothapatna , Malipada , 751003<br>
+              India<br>
+              <strong>Phone:</strong> +91-8984661338<br>
+              <strong>Email:</strong> b317032@iiit-bh.ac.in<br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-sponser" style="margin-left: 45px;">
+            <h1>Powered By</h1>
+            <img src='{% static "img/IIIT.jpg" %}' style="width: 250px ; height: 150px;" >
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Tech - Nerds</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+        -->
+        Designed by <br> Tech - Nerds</br>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src='{% static "lib/jquery/jquery.min.js" %}'></script>
+  <script src='{% static "lib/jquery/jquery-migrate.min.js" %}'></script>
+  <script src='{% static "lib/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+  <script src='{% static "lib/easing/easing.min.js" %}'></script>
+  <script src='{% static "lib/mobile-nav/mobile-nav.js" %}'></script>
+  <script src='{% static "lib/wow/wow.min.js" %}'></script>
+  <script src='{% static "lib/waypoints/waypoints.min.js" %}'></script>
+  <script src='{% static "lib/counterup/counterup.min.js" %}'></script>
+  <script src='{% static "lib/owlcarousel/owl.carousel.min.js" %}'></script>
+  <script src='{% static "lib/isotope/isotope.pkgd.min.js" %}'></script>
+  <script src='{% static "lib/lightbox/js/lightbox.min.js" %}'></script>
+  <!-- Contact Form JavaScript File -->
+  <script src='{% static "contactform/contactform.js" %}'></script>
+
+  <!-- Template Main Javascript File -->
+  <script src='{% static "js/main.js" %}'></script>
+
+</body>
+</html>

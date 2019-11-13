@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+{% extends "test_app/base.html" %}
+{% load bootstrap3 %}
+{% block body_block %}
+<div class="text-center">
+    <h1>
+        <strong>
+            Sign Up 
+        </strong>
+        
+      </h1>
+      
+</div>
+<h5>{{ val }}</h5>
+<form enctype="multipart/form-data" method="POST">
+  {% csrf_token %}
+  <!-- {{ user_form.as_p }} -->
+  {% bootstrap_form user_form %}
+  {% bootstrap_form profile_form %}
+
+  <!-- {{ profile_form.as_p }} -->
+  <div class="text-center">
+      <input type="submit" class="btn-primary" name="" value="Register">
+  </div>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+{% extends "test_app/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+        <div class="container">
+  
+          <header class="section-header">
+            <h3>Our ongoing ventures</h3>
+            <p>The Fields we are presently working in! </p>
+          </header>
+  
+          <div class="row">
+  
+
+            {% for v in val %}
+            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+                <div class="box">
+                  <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+                  <h4 class="title" ><a href="" data-toggle="modal" data-target="#exampleModalLong1">{{ v.topic }}</a></h4>
+                  <p class="description"></p>{{ v.desc }}</p>
+                </div>
+              </div>  
+            {% endfor %}
+            <!-- <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
+                <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong2">Machine Learning</a></h4>
+                <p class="description">Machine learning is the scientific study of algorithms and statistical models that computer systems use to perform a specific task without using explicit instructions, relying on patterns and inference instead</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong3">Cyber Security</a></h4>
+                <p class="description"> cybersecurity or  is the protection of computer systems from the theft of or damage to their hardware, software, or electronic data, as well as from the disruption or misdirection of the services they provide</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+                <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong4">Human Resources Management</a></h4>
+                <p class="description">Human resource management is the strategic approach to the effective management of people in a company or organization such that they help them</p>
+              </div>
+            </div>
+           
+            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon"><i class="ion-ios-world-outline" style="color: #d6ff22;"></i></div>
+                <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong5">Blockchain</a></h4>
+                <p class="description">A blockchain, originally block chain, is a growing list of records, called blocks, that are linked using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s" background="red">
+              <div class="box"  style="background color: darkblue;">
+                <div class="icon"><i class="ion-ios-clock-outline" style="color: #4680ff;"></i></div>
+                <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong6">Cloud Computing</a></h4>
+                <p class="description">Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                <div class="box">
+                  <div class="icon"><i class="ion-ios-star-outline" style="color:brown"></i></div>
+                  <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong7">SQL</a></h4>
+                  <p class="description">SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                <div class="box">
+                  <div class="icon"><i class="ion-ios-eye-outline" style="color:chartreuse;"></i></div>
+                  <h4 class="title"><a href=""data-toggle="modal" data-target="#exampleModalLong8">Automation</a></h4>
+                  <p class="description">Automation or automatic control is the use of various control systems for operating equipment such as machinery, processes in factories, boilers and heat treating ovens, switching on telephone networks etc</p>
+                </div>
+              </div> -->
+              <script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"d0cd65db518e4c8f",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
+  
+          </div>
+  
+        </div>
+
+
+
+        <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Nerdy Buddy for Artificial Intelligence</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+    
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Nerdy Buddy for Machine Learning</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+    
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Nerdy Buddy for Cyber Security</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle"style="text-align: center;">Nerdy Buddy for Human Resources Management</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Nerdy Button for Blockchain</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Nerdy Buddy for Cloud Computing</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">Nerdy buddy for SQL</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModalLong8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle"style="text-align: center;">Nerdy buddy for Automation</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.engati.com/static/standalone/bot.html?bot_key=d0cd65db518e4c8f" width="470" height="510"></iframe>
+                </div>
+                <div class="modal-footer">
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </section><!-- #services -->
+     
+      
+      {% endblock %}

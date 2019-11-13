@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends "test_app/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+<!--==========================
+      Why Us Section
+    ============================-->
+    
+    <section id="why-us" class="wow fadeout">
+        <div class="container" style="background-color:black;">
+          <header class="section-header">
+            <h3>Meetings</h3>
+            <!-- <p>Find out which exciting event is next</p> -->
+            <p>All Upcoming Meetings Are Here</p>
+          </header>
+  
+          <div class="row row-eq-height justify-content-left">
+            {% for v in val %}
+            <div class="col-lg-4 mb-4">
+                <div class="card wow bounceInUp"  style="background-color: darksalmon;">
+                    
+                  <div class="card-body">
+                    <h5 class="card-title">{{ v.Topic }}</h5>
+                    <p class="card-text">{{ v.Objec }}</p>
+                    <br/>
+                    {{ v.Date }} <hr/> {{ v.Place }}
+  
+                  </div>
+                </div>
+              </div>  
+            {% endfor %}
+        </div>
+        <div class="text-center">
+          <a href="newmeet" class="btn btn-primary">ADD</a>
+        </div>
+        <br/>
+      </section>
+
+      {% endblock %}

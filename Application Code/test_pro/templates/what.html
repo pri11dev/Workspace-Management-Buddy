@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends "test_app/base.html" %}
+{% load staticfiles %}
+{% block body_block %}
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 style="">What's New!!</h3>
+          <p>We provide information about what is happening in our company. A perfect timeline consisting of awesome future events</p>
+        </header>
+
+        <div class="row">
+
+          {% for v in val%}
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+          <div class="box">
+            <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+            <h4 class="title"><a href="">{{ v.topic }}</a></h4>
+            <p class="description">{{ v.desc }}</p>
+          </div>
+        </div>
+          {% endfor%}
+
+          <!-- <
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-bookmarks-outline" style="color: #e9bf06;"></i></div>
+              <h4 class="title"><a href="">Launch of Dell XPS Laptops</a></h4>
+              <p class="description">Dell XPS ("Xtreme Performance System") is a line of high performance computers manufactured by Dell.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Dell Seminar on Cloud by Dell EMC Montenegro</a></h4>
+              <p class="description">VMware Cloud on Dell EMC is a fully-managed VMware Cloud service that provides a simple, secure, and scalable infrastructure for your on-premises datacenter and edge locations.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Webinar on Data Protection</a></h4>
+              <p class="description">Dell Data Protection is designed to protect data wherever it goes, including mobile devices, tablets, PCs, public cloud storage, external media, self-encrypting drives and Microsoft® BitLocker™ — enabling your employees to work the way they want, on the devices they want.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-world-outline" style="color: #d6ff22;"></i></div>
+              <h4 class="title"><a href="">Annual Innovation Meet</a></h4>
+              <p class="description">Meetings where the main focus is to come up with new ideas, designing or redesigning products, or developing entirely new approaches for your business, can all be defined as innovation meetings.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-clock-outline" style="color: #4680ff;"></i></div>
+              <h4 class="title"><a href="">Hackathons</a></h4>
+              <p class="description">Dell Hackathons for Hiring across India</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div> -->
+      
+    </section>
+    <br/>
+      <div class="text-center">
+          <a href="newnew" class="btn btn-primary">ADD</a>
+        </div>
+        <br/>
+
+{% endblock %}

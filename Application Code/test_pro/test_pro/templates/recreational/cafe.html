@@ -1,0 +1,126 @@
+{% extends "test_app/base.html"%}
+{% load staticfiles %}
+{% block body_block %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href='{% static "css/templatemo-style.css" %}' rel="stylesheet" />
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Welcome to Cafe Aglio</h2>
+				<p class="col-12 text-center">Our Motto is to provide "Delicious Food For Everyone"</p>
+			</header>
+			
+			<div class="tm-paging-links">
+				<nav>
+					<ul>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Gallery -->
+			<div class="row tm-gallery">
+				<!-- gallery page 1 -->
+				<div id="tm-gallery-page-pizza" class="tm-gallery-page">
+					{% for o in vary %}
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+							<figure>
+								
+								<figcaption>
+									<h4 class="tm-gallery-title">{{ o.dish }}</h4>
+									<p class="tm-gallery-price">Rs {{ o.Price }}</p>
+								</figcaption>
+						
+							</figure>
+						</article>	
+					{% endfor %}
+					<!-- <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/01.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Salad Plate</h4>
+								<p class="tm-gallery-price">Rs 75 /Rs 110</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/02.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Pizza Italiano</h4>
+								<p class="tm-gallery-price">Rs 90 /Rs 125</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/03.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Chicken Cutlets</h4>
+								<p class="tm-gallery-price">Rs 120/Rs 150</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Pasta Parmisan</h4>
+								<p class="tm-gallery-price">Rs 50/Rs 80</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/05.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Gourd Kofta with Collard greens</h4>
+								<p class="tm-gallery-price">Rs 40/ Rs 70</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/06.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Bread Magic</h4>
+								<p class="tm-gallery-price">Rs 40 / Rs 50</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/07.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Caesar Salad</h4>
+								<p class="tm-gallery-price">Rs 100</p>
+							</figcaption>
+						</figure>
+					</article>
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img zoom" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Mushroom Dimsums</h4>
+								<p class="tm-gallery-price">Rs 40</p>
+							</figcaption>
+						</figure>
+					</article> -->
+				</div> <!-- gallery page 1 -->
+							<div class="tm-section tm-container-inner">
+				<div class="row">
+					<div class="col-md-6">
+						<figure class="tm-description-figure">
+							<img src='{% static "img/img-01.jpg" %}' alt="Image" class="img-fluid" />
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<div class="tm-description-box"> 
+							<h4 class="tm-gallery-title">The Avacado Project</h4>
+							<p class="tm-mb-45">This project helps a lot of underpriviledged childer by providing Mid- day meals all over Bhubaneswar.<a rel="nofollow" href=#>Talk to us</a> for donations. Thank you.</p>
+							<a href="about.html" class="tm-btn tm-btn-default tm-right">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+{% endblock %}
